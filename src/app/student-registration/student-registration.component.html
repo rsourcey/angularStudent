@@ -1,0 +1,35 @@
+<p>student-registration works!</p>
+<div class="row">
+    <div class="col s8 offset-s2">
+        <div class="card">
+            <div class="sm jumbotron center-align">
+                <h2>Student Registration</h2>
+            </div>
+            <form #reg = "ngForm" class="col s12 white" (ngSubmit)="onSubmit(reg.value)">
+                <div class="row">
+                    <div class="input-field col s6">
+                      <input type="text" name="email" placeholder="email" ngModel>
+                    </div>
+                    <div class="input-field col s6">
+                        <input type="text" name="gender" placeholder="gender" ngModel>
+                    </div>
+                    <div class="input-field col s6">
+                        <input type="text" name="firstname" placeholder="firstname" ngModel>
+                    </div>
+                    <div class="input-field col s6">
+                        <input type="text" name="lastname" placeholder="lastname" ngModel>
+                    </div>
+                    <div class="input-field col s6">
+                        <input type="password" name="password" ngModel>
+                    </div>
+                    <div class="input-field col s6">
+                        <input type="submit" value="submit">
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,15 @@
+<p>login-in works!</p>
+<form #reg = "ngForm" class="col s12 white" (ngSubmit)="onSubmit(reg.value)">
+    <div class="row">
+        <div class="input-field col s6">
+          <input type="text" name="username" placeholder="email" ngModel>
+        </div>
+    
+        <div class="input-field col s6">
+            <input type="password" name="password" ngModel>
+        </div>
+        <div class="input-field col s6">
+            <input type="submit" value="submit">
+        </div>
+    </div>
+</form>
