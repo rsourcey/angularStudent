@@ -15,8 +15,8 @@ export class LoginInComponent implements OnInit {
   }
   onSubmit(formData):void{
     this.logInService.logIn(formData).subscribe(model => {
-      this.logInModel = model;
-      console.log(this.logInModel);
+      // this.logInModel = model;
+      // console.log(this.logInModel);
     });
    
     alert('Your password is : ' + formData.password);

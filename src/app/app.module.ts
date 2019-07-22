@@ -1,3 +1,5 @@
+
+import { EnrollmentService } from './shared/enrollment.service';
 import { LogInService } from './shared/log-in.service';
 import { StudentService } from './shared/student.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -9,22 +11,31 @@ import { StudentRegistrationComponent } from './student-registration/student-reg
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginInComponent } from './login-in/login-in.component';
+import { StudentListComponent } from './student-list/student-list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BootrapPracticeComponent } from './bootrap-practice/bootrap-practice.component';
+import { EnrollmentComponent } from './enrollment/enrollment.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StudentRegistrationComponent,
-    LoginInComponent
+    LoginInComponent,
+    StudentListComponent,
+    BootrapPracticeComponent,
+    EnrollmentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [
     StudentService,
-    LogInService
+    LogInService,
+    EnrollmentService
   ],
   bootstrap: [AppComponent]
 })

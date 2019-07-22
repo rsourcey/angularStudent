@@ -11,12 +11,6 @@ import { Student } from '../shared/student.model';
 })
 export class StudentRegistrationComponent implements OnInit {
   student:Student;
-  studentRegForm:FormGroup = new FormGroup({
-    email:new FormControl(),
-    gender:new FormControl(),
-    firstname:new FormControl(),
-    lastname:new FormControl()
-  });
 
   constructor(private studentService:StudentService) { }
 

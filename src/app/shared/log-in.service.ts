@@ -2,9 +2,6 @@ import { LogInModel } from './log-in-model.model';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-@Injectable({
-  providedIn: 'root'
-})
 
 
 // const headers = new HttpHeaders({
@@ -35,10 +32,19 @@ export class LogInService {
       'Content-Type':  'application/json',
       'Access-Control-Allow-Methods': '*',
       'Access-Control-Allow-Origin': '*',
-      Authorization:"Basic "+btoa(username+":"+password)
+      Authorization:"Basic " + btoa(username+":"+password)
     }
     console.log(logInModel);
-     return this.http.post<any>(this.api, logInModel, {headers:headers_obj});
+
+     return this.http.post<any>(this.api, logInModel, {headers:headers_obj})
+     .pipe(map(login => {
+       console.log(login.token);
+       if(login){
+         login.authData = window.btoa(username + ':' + password);
+         console.log("HELLO " + login.authData);
+         localStorage.setItem('currentUser', login.token);
+       }
+     }));
 
     // return this.http.post<any>(this.api + 'api/authenticate',logInModel)
     // .pipe(map(student =>{

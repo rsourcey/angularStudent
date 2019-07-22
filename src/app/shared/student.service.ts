@@ -4,13 +4,10 @@ import { Observable, from } from 'rxjs';
 import { Student } from './student.model';
 import {HttpHeaders, HttpClient} from '@angular/common/http';
 
-
-@Injectable({
-  providedIn: 'root'
-})
-const httpOptions = {
+const httpHeader = {
   headers: new HttpHeaders({
-    'Content-Type': 'application/json'
+    Authorization:`Bearer ${localStorage.getItem('currentUser')}`
+
   })
 };
 export class StudentService {
@@ -18,7 +15,11 @@ export class StudentService {
   constructor(private http:HttpClient) { }
   
   postStudent(student:Student):Observable<Student>{
-    return this.http.post<Student>(this.api + 'api/students', student, httpOptions);
+    return this.http.post<Student>(this.api + 'api/students', student, httpHeader);
+  }
 
+  getStudents():Observable<Student[]>{
+    console.log(httpHeader.headers.get('Authorization'));
+    return this.http.get<Student[]>(this.api + 'api/students', httpHeader);
   }
 }
