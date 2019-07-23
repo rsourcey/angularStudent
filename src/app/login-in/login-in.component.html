@@ -1,18 +1,28 @@
 
-<section class="row">
-<p>login-in works!</p>
-<form #reg = "ngForm" class=" s12 white" (ngSubmit)="onSubmit(reg.value)">
-    <div class="row">
-        <div class="input-field s6">
-          <input type="text" name="username" placeholder="email" ngModel>
-        </div>
-    
-        <div class="input-field col s6">
-            <input type="password" name="password" ngModel>
-        </div>
-        <div class="input-field col s6">
-            <input type="submit" value="submit">
-        </div>
+
+<div class="container text-center">
+    <div>
+        <h2 class="title">Welcome!</h2>
     </div>
-</form>
-</section>
+
+<div class="card" style="width: 50%; display: inline-block">
+        <form #reg = "ngForm" class="white" (ngSubmit)="onSubmit(reg.value)">
+                <div class="center col-sm">
+                    <label>username</label>
+                    <div class="s1">
+                      <input type="text" class="form-control" name="username" placeholder="email" required ngModel>
+                    </div>
+                    <label>password</label>
+                    <div class="s1">
+                        <input type="password" class="form-control" name="password" required ngModel>
+                    </div>
+                   
+                    <div class="s1 login-btn">
+                        <input class="btn btn-primary" type="submit" value="Login">
+                    </div>
+                    <button type="button" class="btn btn-success login-btn" (click)="register()">Register</button>
+                </div>
+            </form>
+</div>
+
+</div>

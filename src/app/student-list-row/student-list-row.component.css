@@ -1,0 +1,11 @@
+
+.bg-white{
+    background-color: whitesmoke;
+    padding: 20px 20px 5px 20px;
+}
+
+.btn-student{
+    width: 100px;
+    height: 40px;
+    margin-left: 10px;
+}

@@ -15,6 +15,9 @@ import { StudentListComponent } from './student-list/student-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BootrapPracticeComponent } from './bootrap-practice/bootrap-practice.component';
 import { EnrollmentComponent } from './enrollment/enrollment.component';
+import { StudentListRowComponent } from './student-list-row/student-list-row.component';
+import { EnrollmentDeleteComponent } from './enrollment-delete/enrollment-delete.component';
+import { StudentViewComponent } from './student-view/student-view.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { EnrollmentComponent } from './enrollment/enrollment.component';
     LoginInComponent,
     StudentListComponent,
     BootrapPracticeComponent,
-    EnrollmentComponent
+    EnrollmentComponent,
+    StudentListRowComponent,
+    EnrollmentDeleteComponent,
+    StudentViewComponent
   ],
   imports: [
     BrowserModule,

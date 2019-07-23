@@ -1,0 +1,26 @@
+
+    <div class="row bg-white">
+        <div class="" style="width: 2rem">
+            <label>Id</label>
+            <p>{{student.id}}</p>
+        </div>
+        <div class="col-sm">
+            <label>Email</label>
+            <p>{{student.email}}</p>
+        </div>
+        <div class="col-sm">
+            <label>Gender</label>
+            <p>{{student.gender}}</p>
+        </div>
+        <div class="col-sm">
+            <label>Firstname</label>
+            <p>{{student.firstname}}</p>
+        </div>
+        <div class="col-sm">
+            <label>Lastname</label>
+            <p>{{student.lastname}}</p>
+        </div>
+        <button type="button" class="btn btn-success btn-student" (click)="view(student)">View</button>
+        <button type="button" class="btn btn-primary btn-student" (click)="post(student)">Enroll</button>
+        <button type="button" class="btn btn-danger btn-student" (click)="delete(student)">Unenroll</button>
+    </div>

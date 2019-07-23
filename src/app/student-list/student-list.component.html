@@ -1,27 +1,8 @@
-<p>student-list works!</p>
-
-<div class="container" *ngFor="let student of students">
-    <div class="row">
-        <div class="col-sm">
-            <label>Id</label>
-            <p>{{student.id}}</p>
-        </div>
-        <div class="col-sm">
-            <label>Email</label>
-            <p>{{student.email}}</p>
-        </div>
-        <div class="col-sm">
-            <label>Gender</label>
-            <p>{{student.gender}}</p>
-        </div>
-        <div class="col-sm">
-            <label>Firstname</label>
-            <p>{{student.firstname}}</p>
-        </div>
-        <div class="col-sm">
-            <label>Lastname</label>
-            <p>{{student.lastname}}</p>
-        </div>
-        <button type="button" class="btn btn-primary" (click)="reRoute(student)">Enroll</button>
-    </div>
+<div class="container">
+        <div class="row">
+                <h3 class="title">Student List</h3>
+            </div>
+            <div class="container" *ngFor="let student of students">
+                <app-student-list-row [student]="student"></app-student-list-row>
+            </div>
 </div>

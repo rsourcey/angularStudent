@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class StudentListComponent implements OnInit {
   students:Student[];
-  popsi = ['bang bang','mamamoo','yeyeye'];
+
   constructor(private studentService:StudentService, private router:Router) { }
 
   ngOnInit() {
@@ -21,16 +21,17 @@ export class StudentListComponent implements OnInit {
     this.studentService.getStudents().subscribe(x=>{
       this.students = x;
       this.students.forEach(function(val){
-        console.log(val);
+        // console.log(val);
       })
       if(this.students == null){
-        console.log('ohayo');
+        // console.log('ohayo');
       }
     });
   }
 
   reRoute(student:Student){
-    this.router.navigateByUrl(`enrollment?id=${student.id}`);
+    //  this.router.navigateByUrl(`enrollment?id=${student.id}&request=${"delete"}`);
+    this.router.navigate(['enrollment',{id:student.id,request:'delete'}]);
 
   }
 

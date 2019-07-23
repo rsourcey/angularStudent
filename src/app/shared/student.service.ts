@@ -19,7 +19,11 @@ export class StudentService {
   }
 
   getStudents():Observable<Student[]>{
-    console.log(httpHeader.headers.get('Authorization'));
+    // console.log(httpHeader.headers.get('Authorization'));
     return this.http.get<Student[]>(this.api + 'api/students', httpHeader);
+  }
+
+  getStudent(id:string):Observable<Student>{
+    return this.http.get<Student>(this.api + `api/students/${id}`, httpHeader);
   }
 }

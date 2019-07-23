@@ -1,3 +1,4 @@
+import { Course } from './course.model';
 export class Student {
     id: string;
     email:string;
@@ -5,4 +6,5 @@ export class Student {
     firstname:string;
     lastname:string;
     password:string;
+    course:Course;
 }

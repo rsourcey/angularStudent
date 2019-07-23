@@ -1,0 +1,27 @@
+
+<div class="">
+    <div class="">
+        <div class="card">
+            <div class="sm jumbotron center-align">
+                <h2>Student Delete Enrollment</h2>
+            </div>
+            <form #del="ngForm" class=" white-bg" (ngSubmit)="onDelete(del.value)">
+                <div class="col white-bg">
+                    <div class="row mt-2">
+                            <label class="col-2">Id</label>
+                            <input class="col-2" type="number" name="id" value={{studentId}} disabled>
+                    </div>
+                    <div class="row mt-2">
+                            <label class="col-2">CourseId</label>
+                            <input class="col-2" type="number" name="courseId" placeholder="courseId" required ngModel>
+                    </div>
+                    
+                </div>
+               <div class="input-container white-bg col-3">
+                            <input class="btn btn-danger" type="submit" value="Unenroll">
+                    </div>
+            </form>
+
+        </div>
+    </div>
+</div>
