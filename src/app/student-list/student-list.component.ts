@@ -2,6 +2,7 @@ import { StudentService } from './../shared/student.service';
 import { Student } from './../shared/student.model';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Course } from '../shared/course.model';
 
 @Component({
   selector: 'app-student-list',
@@ -9,23 +10,37 @@ import { Router } from '@angular/router';
   styleUrls: ['./student-list.component.css']
 })
 export class StudentListComponent implements OnInit {
-  students:Student[];
+  // students:Student[];
+  students: Array<Student>;
 
   constructor(private studentService:StudentService, private router:Router) { }
 
   ngOnInit() {
+    this.students = new Array<Student>();
     this.loadAllStudents();
   }
 
   loadAllStudents(){
-    this.studentService.getStudents().subscribe(x=>{
+    this.studentService.getStudents().subscribe((x: Student[])=>{
+     
+      // x.forEach((st:Student)=>{
+      //   st.enrollments === undefined ? st.enrollments = [] : st.enrollments.push(new Course("1", "hello")); 
+
+      //   if (st.enrollments) {
+      //     st.enrollments.push(new Course("1", "hello"));
+      //     st.enrollments.push(new Course("2", "world"));
+      //   }
+      // });
+
       this.students = x;
-      this.students.forEach(function(val){
-        // console.log(val);
-      })
-      if(this.students == null){
-        // console.log('ohayo');
-      }
+      // this.students.forEach((student: Student) => {
+      //   console.log(student);
+      // });
+    
+      // this.students.forEach((student: Student) => {
+      //   console.log('st: ', student.enrollments);
+      // });
+
     });
   }
 

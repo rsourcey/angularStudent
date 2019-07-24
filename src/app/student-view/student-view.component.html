@@ -1,24 +1,40 @@
-<!-- <div class="row bg-white">
-        <div class="" style="width: 2rem">
-            <label>Id</label>
-            <p>{{student.id}}</p>
+<div class="row bg-white" *ngIf="isDataLoaded">
+    <div class="row" style="background-color: azure; width: 100%; padding-left:35px;">
+                <div class="col-2">
+                    <label>Student Id</label>
+                    <p>{{studyante.id }}</p>
+                </div>
+                <div class="col">
+                    <label>Email</label>
+                    <p>{{studyante.email}}</p>
+                </div>
+                <div class="col">
+                    <label>Firstname</label>
+                    <p>{{studyante.firstname}}</p>
+                </div>
+                <div class="col-sm">
+                    <label>Lastname</label>
+                    <p>{{studyante.lastname}}</p>
+                </div>   
+    </div>
+    <div class="row">
+            <h4 class="col-12">Enrollments</h4>
+    </div>
+    <div class="row" style="width: 100%; padding-left: 200px" *ngFor="let enrollment of studyante.enrollments">
+        <div class="row mb-4" style="width: 100%">
+                <div class="col-1 border-right">
+                        <label>id</label>
+                        <p>{{enrollment.id}}</p>
+                </div>
+                <div class="col-5 border-right">
+                        <label>Name</label>
+                        <p>{{enrollment.name}}</p>
+                </div>
+                <div class="col-1">
+                    <button type="button" class="btn btn-danger btn-student" 
+                    (click)="delete(studyante, {id:enrollment.id, name:enrollment.name})">Unenroll</button>
+                </div>
         </div>
-        <div class="col-sm">
-            <label>Email</label>
-            <p>{{student.email}}</p>
-        </div>
-        <div class="col-sm">
-            <label>Gender</label>
-            <p>{{student.gender}}</p>
-        </div>
-        <div class="col-sm">
-            <label>Firstname</label>
-            <p>{{student.firstname}}</p>
-        </div>
-        <div class="col-sm">
-            <label>Lastname</label>
-            <p>{{student.lastname}}</p>
-        </div>     
-</div> -->
-<p></p>
-<h1>Wala pa</h1>
+        
+    </div>  
+</div>

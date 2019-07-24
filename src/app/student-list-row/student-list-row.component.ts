@@ -13,7 +13,7 @@ export class StudentListRowComponent implements OnInit {
   constructor(private router:Router) { }
 
   ngOnInit() {
-    console.log('good morning ' + this.student);
+    
   }
 
   post(student:Student){

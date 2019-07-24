@@ -8,12 +8,17 @@
             <form #del="ngForm" class=" white-bg" (ngSubmit)="onDelete(del.value)">
                 <div class="col white-bg">
                     <div class="row mt-2">
-                            <label class="col-2">Id</label>
+                            <label class="col-2">Student Id</label>
                             <input class="col-2" type="number" name="id" value={{studentId}} disabled>
                     </div>
                     <div class="row mt-2">
-                            <label class="col-2">CourseId</label>
-                            <input class="col-2" type="number" name="courseId" placeholder="courseId" required ngModel>
+                            <label class="col-2">Course Id</label>
+                            <input class="col-2" type="number" name="courseId" value= {{courseId}} disabled>
+                    </div>
+                    <div class="row mt-2">
+                            <label class="col-2">Course Name</label>
+                            <input class="col-2" name="courseName" value= {{courseName}} disabled>
+                            
                     </div>
                     
                 </div>

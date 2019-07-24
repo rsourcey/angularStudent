@@ -18,6 +18,7 @@ import { EnrollmentComponent } from './enrollment/enrollment.component';
 import { StudentListRowComponent } from './student-list-row/student-list-row.component';
 import { EnrollmentDeleteComponent } from './enrollment-delete/enrollment-delete.component';
 import { StudentViewComponent } from './student-view/student-view.component';
+import { TestoComponent } from './testo/testo.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { StudentViewComponent } from './student-view/student-view.component';
     EnrollmentComponent,
     StudentListRowComponent,
     EnrollmentDeleteComponent,
-    StudentViewComponent
+    StudentViewComponent,
+    TestoComponent
   ],
   imports: [
     BrowserModule,

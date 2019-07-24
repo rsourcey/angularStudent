@@ -1,3 +1,4 @@
+import { TestoComponent } from './testo/testo.component';
 import { StudentViewComponent } from './student-view/student-view.component';
 import { EnrollmentDeleteComponent } from './enrollment-delete/enrollment-delete.component';
 import { EnrollmentComponent } from './enrollment/enrollment.component';
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path:'enrollment', component:EnrollmentComponent},
   {path:'enrollment-delete', component:EnrollmentDeleteComponent},
   {path:'bootstrap', component:BootrapPracticeComponent},
-  {path:'student-view', component:StudentViewComponent}
+  {path:'student-view', component:StudentViewComponent},
+  {path:'testo', component:TestoComponent}
 ];
 
 @NgModule({

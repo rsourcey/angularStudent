@@ -29,7 +29,7 @@
               "src/styles.css"
             ],
             "scripts": [
-             "node_modules/particle.js/particle.js"
+             
             ]
           },
           "configurations": {
